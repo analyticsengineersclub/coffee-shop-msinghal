@@ -1,3 +1,7 @@
+{{ config(
+    materialized='table'
+) }}
+
 -- Pre-work Query
 WITH customers AS(
 SELECT id as customer_id, name, email
