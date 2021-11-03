@@ -1,0 +1,29 @@
+version: 2
+
+models:
+  - name: customers
+    description: Curated customers data
+    columns:
+      - name: customer_id
+        description: Primary key of the model
+        tests:
+          - unique
+          - not_null
+      - name: name
+        description: Customer name
+        tests:
+          - unique
+          - not_null
+      - name: email
+        description: Customer contact point
+        tests:
+          - unique
+          - not_null
+      - name: first_order_at
+        description: Customer's first order date
+        tests:
+          - not_null
+      - name: number_of_orders
+        description: Total orders placed
+        tests:
+          - not_null
